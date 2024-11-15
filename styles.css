@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #3498db;
+    --background-color-light: #fff;
+    --background-color-dark: #2c3e50;
+    --text-color-light: #333;
+    --text-color-dark: #fff;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-speed: 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-dark);
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color-light);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background: var(--background-color-dark);
+    color: var(--primary-color);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    transition: transform var(--transition-speed);
+}
+
+header h1:hover {
+    transform: scale(1.05);
+}
+
+header p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.toggle-theme:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.profile-image {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: var(--background-color-dark);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color var(--transition-speed);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    transition: transform var(--transition-speed);
+}
+
+.section h2:hover {
+    transform: translateY(-5px);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.skills-list li {
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.skills-list li i {
+    margin-right: 10px; /* Add margin to the right of the icon */
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow);
+}
+
+.project, .education-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+}
+
+.project img, .education-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: var(--border-radius);
+}
+
+.project:hover, .education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.project h3, .education-item h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.project p, .education-item p {
+    margin: 0;
+    color: var(--text-color-light);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section h2 {
+        font-size: 36px;
+    }
+
+    .project, .education-item {
+        padding: 15px;
+    }
+
+    .skills-list li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.animate__fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate__fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
