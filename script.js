@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
-    const links = document.querySelectorAll('nav a');
+    // The page uses header links directly instead of a <nav> element
+    const links = document.querySelectorAll('header a');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -12,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle dark mode
     const toggleTheme = document.querySelector('.toggle-theme');
-    toggleTheme.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
+    if (toggleTheme) {
+        toggleTheme.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    }
 
     // Scroll event for animations
     function handleScroll() {
@@ -29,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Expose for testing
+    window.handleScroll = handleScroll;
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('load', handleScroll);
 });
+
+if (typeof module !== 'undefined') {
+    module.exports = { handleScroll };
+}
