@@ -1,6 +1,6 @@
 # 💼 Hriday Mehta - Portfolio  
 
-Welcome to my GitHub Portfolio! This repository serves as a showcase of my work, projects, skills, and interests in the field of Mobile App Developer.  
+Welcome to my GitHub Portfolio! This repository serves as a showcase of my work, projects, skills, and interests in the field of Mobile App Development.
 
 ---
 
@@ -35,4 +35,8 @@ I am a passionate mobile app developer with a knack for creating intuitive and u
 
 ---
 
-Thank you for visiting my portfolio! Feel free to explore and reach out if you have any questions or collaboration ideas.  
+Thank you for visiting my portfolio! Feel free to explore and reach out if you have any questions or collaboration ideas.
+
+## 🧪 Running Tests
+1. Install dependencies with `npm install`.
+2. Execute `npm test` to run the Jest suite.
