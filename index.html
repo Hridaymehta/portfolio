@@ -1,207 +1,167 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Hriday Mehta - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body { font-family: Manrope, "Noto Sans", sans-serif; }
+      .gradient-text { background: linear-gradient(135deg, #1980e6, #0057b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+      .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(25, 128, 230, 0.2); }
+    </style>
   </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
-    
-            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">Hriday Mehta</h2>
+  <body class="bg-[#0f172a] text-white overflow-x-hidden">
+    <nav class="fixed w-full z-30 bg-[#0f172a]/95 backdrop-blur-md border-b border-[#1e293b]">
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#1980e6] to-[#0057b8] flex items-center justify-center font-bold text-sm overflow-hidden">
+            <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover rounded-full" />
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#About">About</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#Skills">Skills</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#Projects">Projects</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#Contact">Contact</a>
-            </div>
-           
-            <div
-  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-  style="background-image: url('images/profile.jpg');"
-></div>
-
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("images/background.jpg");'
-                >
-                  <div class="flex flex-col gap-2 text-left">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Hriday Mehta
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Mobile App Developer
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            <section id="About">
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About</h2>
-            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Fresher mobile app developer with hands-on experience in building two projects. Eager to learn, adaptable, and focused on creating user-friendly applications.
-            </p>
-            </section>
-
-            <section id="Skills">
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Skills</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 flex-col">
-                <div class="text-[#111418]" data-icon="PaintBrush" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#111418] text-base font-bold leading-tight">UI/UX Design</h2>
-                  <p class="text-[#637588] text-sm font-normal leading-normal">Figma, Sketch, Adobe XD</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 flex-col">
-                <div class="text-[#111418]" data-icon="Laptop" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M232,168h-8V72a24,24,0,0,0-24-24H56A24,24,0,0,0,32,72v96H24a8,8,0,0,0-8,8v16a24,24,0,0,0,24,24H216a24,24,0,0,0,24-24V176A8,8,0,0,0,232,168ZM48,72a8,8,0,0,1,8-8H200a8,8,0,0,1,8,8v96H48ZM224,192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8v-8H224ZM152,88a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,88Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#111418] text-base font-bold leading-tight">Product Design</h2>
-                  <p class="text-[#637588] text-sm font-normal leading-normal">Webflow, Framer, Principle</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 flex-col">
-                <div class="text-[#111418]" data-icon="ChartBar" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#111418] text-base font-bold leading-tight">Design Systems</h2>
-                  <p class="text-[#637588] text-sm font-normal leading-normal">React, Vue, Angular, Svelte</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 flex-col">
-                <div class="text-[#111418]" data-icon="DeviceMobile" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#111418] text-base font-bold leading-tight">Mobile Design</h2>
-                  <p class="text-[#637588] text-sm font-normal leading-normal">iOS, Android, Flutter</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#dce0e5] bg-white p-4 flex-col">
-                <div class="text-[#111418]" data-icon="CodeSimple" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M93.31,70,28,128l65.27,58a8,8,0,1,1-10.62,12l-72-64a8,8,0,0,1,0-12l72-64A8,8,0,1,1,93.31,70Zm152,52-72-64a8,8,0,0,0-10.62,12L228,128l-65.27,58a8,8,0,1,0,10.62,12l72-64a8,8,0,0,0,0-12Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#111418] text-base font-bold leading-tight">Front-end Development</h2>
-                  <p class="text-[#637588] text-sm font-normal leading-normal">HTML, CSS, JavaScript, TypeScript</p>
-                </div>
-              </div>
-            </div>
-            </section>
-
-            <section id="Projects">
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Projects</h2>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#637588] text-sm font-normal leading-normal">2024 • Mobile Application</p>
-                    <p class="text-[#111418] text-base font-bold leading-tight">Calc Master: Simplifying Calculations</p>
-                    <p class="text-[#637588] text-sm font-normal leading-normal">A modern and versatile calculator application built using Flutter and Dart. It combines the functionality of a basic calculator for simple arithmetic with a scientific calculator for advanced mathematical operations. The app includes a unit converter and a clean, intuitive interface.</p>
-                  </div>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-1"
-                  style='background-image: url("images/calc_master.png");'
-                ></div>
-              </div>
-            </div>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#637588] text-sm font-normal leading-normal">2024 • Mobile Application</p>
-                    <p class="text-[#111418] text-base font-bold leading-tight">Cineflix: Stream, Watch, Enjoy</p>
-                    <p class="text-[#637588] text-sm font-normal leading-normal">A versatile streaming app offering access to the latest movies and series across various genres, all in one place. Includes live TV capabilities and a user-friendly interface with easy navigation.</p>
-                  </div>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-1"
-                  style='background-image: url("images/cineflix.png");'
-                ></div>
-              </div>
-            </div>
-            </section>
-
-            <!-- Contact section -->
-            <section id="Contact">
-        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
-<div class="flex flex-col gap-4 px-4 py-3">
-  <!-- Email and Phone in Horizontal Line -->
-  <div class="grid grid-cols-2 gap-4">
-    <div class="flex flex-col">
-      <h3 class="text-[#111418] text-base font-semibold leading-normal">Email:</h3>
-      <p class="text-[#637588] text-sm font-normal leading-normal">hridaymeht58@gmail.com</p>
-    </div>
-    <div class="flex flex-col">
-      <h3 class="text-[#111418] text-base font-semibold leading-normal">Phone:</h3>
-      <p class="text-[#637588] text-sm font-normal leading-normal">+91 9571622264</p>
-    </div>
-  </div>
-
-  <!-- LinkedIn and GitHub in Horizontal Line -->
-  <div class="grid grid-cols-2 gap-4">
-    <div class="flex flex-col gap-2">
-      <h3 class="text-[#111418] text-base font-semibold leading-normal">LinkedIn:</h3>
-      <a href="https://linkedin.com/in/hridaymehta" class="text-[#1980e6] text-sm font-medium leading-normal hover:text-[#0057b8] transition-colors duration-300">linkedin.com/in/hridaymehta</a>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-[#111418] text-base font-semibold leading-normal">GitHub:</h3>
-      <a href="https://github.com/hridaymehta" class="text-[#1980e6] text-sm font-medium leading-normal hover:text-[#0057b8] transition-colors duration-300">github.com/hridaymehta</a>
-    </div>
-  </div>
-</div>
-            </section>
-
+          <span class="text-xl font-extrabold tracking-tight hidden sm:block gradient-text">Hriday Mehta</span>
+        </a>
+        <div class="flex gap-8">
+          <a href="#about" class="text-[#cbd5e1] hover:text-[#1980e6] font-semibold transition">About</a>
+          <a href="#skills" class="text-[#cbd5e1] hover:text-[#1980e6] font-semibold transition">Skills</a>
+          <a href="#projects" class="text-[#cbd5e1] hover:text-[#1980e6] font-semibold transition">Projects</a>
+          <a href="#contact" class="text-[#cbd5e1] hover:text-[#1980e6] font-semibold transition">Contact</a>
         </div>
       </div>
-    </div>
+    </nav>
+    <section id="home" class="pt-32 pb-24 px-6 text-center relative overflow-hidden">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-[#1980e6]/20 rounded-full blur-3xl opacity-50"></div>
+      <div class="absolute bottom-20 right-10 w-72 h-72 bg-[#0057b8]/20 rounded-full blur-3xl opacity-50"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <div class="inline-block mb-6 px-4 py-2 bg-[#1e293b] border border-[#1980e6]/30 rounded-full">
+          <span class="text-[#1980e6] text-sm font-semibold">👋 Welcome to my portfolio</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 leading-tight"><span class="gradient-text">Hriday Mehta</span></h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#cbd5e1] mb-6">Mobile App Developer</h2>
+        <p class="text-lg text-[#94a3b8] mb-10 leading-relaxed max-w-2xl mx-auto">I craft beautiful, intuitive mobile applications. Passionate about learning, innovation, and creating seamless user experiences.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-[#1980e6] to-[#0057b8] hover:shadow-lg hover:shadow-[#1980e6]/50 rounded-full font-bold transition">View My Work</a>
+          <a href="#contact" class="px-8 py-4 border-2 border-[#1980e6] text-[#1980e6] hover:bg-[#1980e6]/10 rounded-full font-bold transition">Get In Touch</a>
+        </div>
+        <div class="flex justify-center gap-6">
+          <a href="https://linkedin.com/in/hridaymehta" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#334155] hover:border-[#1980e6] hover:bg-[#1980e6]/10 transition">💼</a>
+          <a href="https://github.com/hridaymehta" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#334155] hover:border-[#1980e6] hover:bg-[#1980e6]/10 transition">🐙</a>
+          <a href="mailto:hridaymeht58@gmail.com" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#334155] hover:border-[#1980e6] hover:bg-[#1980e6]/10 transition">✉️</a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-24 px-6 bg-[#1e293b]/50">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center"><span class="gradient-text">About Me</span></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-4 text-[#cbd5e1] text-lg leading-relaxed">
+            <p>I'm a fresher mobile app developer with a passion for building high-quality, user-centric applications. With hands-on experience in developing two projects, I've learned the importance of clean code and intuitive design.</p>
+            <p>I thrive on learning new technologies, tackling challenges, and collaborating with creative teams. My goal is to contribute to impactful projects that make a real difference.</p>
+          </div>
+          <div class="bg-gradient-to-br from-[#1980e6]/20 to-[#0057b8]/20 border border-[#1980e6]/30 rounded-2xl p-8">
+            <h3 class="text-xl font-bold mb-6 text-[#1980e6]">Key Strengths</h3>
+            <ul class="space-y-3 text-[#cbd5e1]">
+              <li>⚡ Fast learner & highly adaptable</li>
+              <li>🎯 User-first approach to design</li>
+              <li>🧠 Problem-solving mindset</li>
+              <li>🤝 Strong team collaboration</li>
+              <li>🔍 Attention to detail</li>
+              <li>📈 Always eager to improve</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-4 text-center"><span class="gradient-text">Skills & Expertise</span></h2>
+        <p class="text-center text-[#94a3b8] mb-16">A versatile set of skills covering design, development, and mobile app creation</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">🎨</div><h3 class="font-bold text-xl mb-2">UI/UX Design</h3><p class="text-[#94a3b8]">Figma • Sketch • Adobe XD</p></div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">🎯</div><h3 class="font-bold text-xl mb-2">Product Design</h3><p class="text-[#94a3b8]">Webflow • Framer • Principle</p></div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">🏗️</div><h3 class="font-bold text-xl mb-2">Design Systems</h3><p class="text-[#94a3b8]">React • Vue • Angular • Svelte</p></div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">📱</div><h3 class="font-bold text-xl mb-2">Mobile Design</h3><p class="text-[#94a3b8]">iOS • Android • Flutter</p></div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">💻</div><h3 class="font-bold text-xl mb-2">Frontend Dev</h3><p class="text-[#94a3b8]">HTML • CSS • JavaScript • TypeScript</p></div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-2xl p-8 flex flex-col items-center text-center"><div class="text-6xl mb-4">🛠️</div><h3 class="font-bold text-xl mb-2">Tools & More</h3><p class="text-[#94a3b8]">Git • Firebase • REST APIs</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="py-24 px-6 bg-[#1e293b]/50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-4 text-center"><span class="gradient-text">Featured Projects</span></h2>
+        <p class="text-center text-[#94a3b8] mb-16">Showcasing my best mobile app development work</p>
+        <div class="space-y-12">
+          <div class="card-hover bg-[#0f172a] border border-[#334155] rounded-2xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+              <div class="bg-gradient-to-br from-[#1980e6]/30 to-[#0057b8]/30 flex items-center justify-center p-8 min-h-[350px]">
+                <img src="images/calc_master.png" alt="Calc Master" class="w-56 h-56 object-contain drop-shadow-lg" />
+              </div>
+              <div class="p-8 flex flex-col justify-center">
+                <span class="text-[#1980e6] font-semibold mb-2 text-sm">📱 Mobile App • 2024</span>
+                <h3 class="text-3xl font-bold mb-4">Calc Master</h3>
+                <p class="text-[#cbd5e1] text-lg mb-6">A modern calculator app built with Flutter & Dart. Features basic arithmetic, scientific calculations, and unit converter with an intuitive interface.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">Flutter</span>
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">Dart</span>
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">Mobile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-hover bg-[#0f172a] border border-[#334155] rounded-2xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+              <div class="p-8 flex flex-col justify-center md:order-2">
+                <span class="text-[#1980e6] font-semibold mb-2 text-sm">🎬 Streaming App • 2024</span>
+                <h3 class="text-3xl font-bold mb-4">Cineflix</h3>
+                <p class="text-[#cbd5e1] text-lg mb-6">A feature-rich streaming platform with movies, series, and live TV across multiple genres. Built with user-friendly interface and stunning visuals.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">Mobile</span>
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">Streaming</span>
+                  <span class="px-3 py-1 bg-[#1980e6]/20 text-[#1980e6] rounded-full text-sm">UI/UX</span>
+                </div>
+              </div>
+              <div class="bg-gradient-to-br from-[#1980e6]/30 to-[#0057b8]/30 flex items-center justify-center p-8 min-h-[350px] md:order-1">
+                <img src="images/cineflix.png" alt="Cineflix" class="w-56 h-56 object-contain drop-shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4"><span class="gradient-text">Let's Work Together</span></h2>
+          <p class="text-[#cbd5e1] text-lg">Have an exciting project? I'd love to hear about it.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-xl p-6">
+            <h3 class="text-[#1980e6] font-bold text-lg mb-3">✉️ Email</h3>
+            <a href="mailto:hridaymeht58@gmail.com" class="text-[#cbd5e1] hover:text-[#1980e6] transition">hridaymeht58@gmail.com</a>
+          </div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-xl p-6">
+            <h3 class="text-[#1980e6] font-bold text-lg mb-3">📱 Phone</h3>
+            <a href="tel:+919571622264" class="text-[#cbd5e1] hover:text-[#1980e6] transition">+91 9571622264</a>
+          </div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-xl p-6">
+            <h3 class="text-[#1980e6] font-bold text-lg mb-3">💼 LinkedIn</h3>
+            <a href="https://linkedin.com/in/hridaymehta" target="_blank" class="text-[#cbd5e1] hover:text-[#1980e6] transition">linkedin.com/in/hridaymehta</a>
+          </div>
+          <div class="card-hover bg-[#1e293b] border border-[#334155] rounded-xl p-6">
+            <h3 class="text-[#1980e6] font-bold text-lg mb-3">🐙 GitHub</h3>
+            <a href="https://github.com/hridaymehta" target="_blank" class="text-[#cbd5e1] hover:text-[#1980e6] transition">github.com/hridaymehta</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="mailto:hridaymeht58@gmail.com" class="inline-block px-10 py-4 bg-gradient-to-r from-[#1980e6] to-[#0057b8] hover:shadow-lg hover:shadow-[#1980e6]/50 rounded-full font-bold transition">Send Me an Email</a>
+        </div>
+      </div>
+    </section>
+    <footer class="border-t border-[#334155] py-8 px-6 text-center text-[#94a3b8]">
+      <p>&copy; 2024 Hriday Mehta. All rights reserved.</p>
+    </footer>
   </body>
 </html>
